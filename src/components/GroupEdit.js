@@ -13,20 +13,27 @@ const GroupEdit = ({ group, updateGroup, cancelEdit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input 
-        type="text" 
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <textarea 
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-      />
-      <button type="submit">Update Group</button>
-      <button type="button" onClick={cancelEdit}>Cancel</button>
+    <form onSubmit={handleSubmit} className="mb-4">
+      <div className="form-group">
+        <input 
+          type="text" 
+          className="form-control"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </div>
+      <div className="form-group">
+        <textarea 
+          className="form-control"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
+      </div>
+      <button type="submit" className="btn btn-primary">Update Group</button>
+      <button type="button" onClick={cancelEdit} className="btn btn-secondary ml-2">Cancel</button>
     </form>
   );
 };
+
 
 export default GroupEdit;

@@ -20,21 +20,28 @@ const GroupForm = ({ addGroup }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="mb-4">
+    <div className="form-group">
       <input 
         type="text" 
+        className="form-control"
         placeholder="Group Name" 
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
+    </div>
+    <div className="form-group">
       <textarea 
+        className="form-control"
         placeholder="Description" 
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <button type="submit">Create Group</button>
-    </form>
-  );
+    </div>
+    <button type="submit" className="btn btn-primary">Create Group</button>
+  </form>
+);
 };
+
 
 export default GroupForm;
