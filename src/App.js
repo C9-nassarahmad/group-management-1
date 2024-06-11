@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import GroupForm from './components/GroupForm';
 import GroupList from './components/GroupList';
 import GroupEdit from './components/GroupEdit';
+import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => {
   const [groups, setGroups] = useState([]);
   const [editingGroup, setEditingGroup] = useState(null);
@@ -34,8 +35,8 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <h1>Group Management</h1>
+    <div className="App container mt-4">
+      <h1 className="mb-4">Group Management</h1>
       {editingGroup ? (
         <GroupEdit 
           group={editingGroup}
@@ -54,5 +55,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;
