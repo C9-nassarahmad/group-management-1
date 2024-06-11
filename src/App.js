@@ -8,7 +8,7 @@ const App = () => {
   const [editingGroup, setEditingGroup] = useState(null);
 
   const addGroup = (group) => {
-    setGroups([...groups, group]);
+    setGroups([...groups, { ...group, posts: [] }]);
   };
 
   const deleteGroup = (id) => {
