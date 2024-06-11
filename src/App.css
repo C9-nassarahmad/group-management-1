@@ -1,3 +1,30 @@
 .App {
   text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.group {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 5px;
 }
