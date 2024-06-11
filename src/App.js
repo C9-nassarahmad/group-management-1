@@ -27,6 +27,11 @@ const App = () => {
   const cancelEdit = () => {
     setEditingGroup(null);
   };
+  const addPost = (groupId, post) => {
+    setGroups(groups.map(group => 
+      group.id === groupId ? { ...group, posts: [...group.posts, post] } : group
+    ));
+  };
 
   return (
     <div className="App">
@@ -44,6 +49,7 @@ const App = () => {
         groups={groups}
         deleteGroup={deleteGroup}
         editGroup={editGroup}
+        addPost={addPost}
       />
     </div>
   );
