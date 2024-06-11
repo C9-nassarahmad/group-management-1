@@ -20,19 +20,25 @@ const PostForm = ({ addPost }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input 
-        type="text" 
-        placeholder="Post Title" 
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <textarea 
-        placeholder="Content" 
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-      />
-      <button type="submit">Create Post</button>
+    <form onSubmit={handleSubmit} className="mb-4">
+      <div className="form-group">
+        <input 
+          type="text" 
+          className="form-control"
+          placeholder="Post Title" 
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+      </div>
+      <div className="form-group">
+        <textarea 
+          className="form-control"
+          placeholder="Content" 
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+        />
+      </div>
+      <button type="submit" className="btn btn-primary">Create Post</button>
     </form>
   );
 };
